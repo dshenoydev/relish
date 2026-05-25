@@ -1,0 +1,60 @@
+/* ─── Relish — Logo styles ──────────────────────────────────────────── */
+
+.relish-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+  color: var(--forest);
+}
+.relish-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.relish-mark svg { display: block; }
+
+.relish-word {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  color: currentColor;
+  line-height: 0.9;
+}
+.relish-period {
+  color: var(--terracotta);
+  margin-left: -0.04em;
+}
+
+/* hover wiggle */
+.relish-logo:hover .relish-mark {
+  animation: relishWiggle 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+@keyframes relishWiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-6deg) scale(1.05); }
+  60% { transform: rotate(8deg) scale(1.05); }
+  85% { transform: rotate(-2deg); }
+}
+
+/* Stamp (vertical) */
+.relish-stamp {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  line-height: 1;
+}
+.relish-stamp-word {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  color: currentColor;
+}
+.relish-stamp-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}

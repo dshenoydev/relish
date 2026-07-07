@@ -1,2 +1,4 @@
 .thumbnail
 scraps/
+node_modules/
+dist/

@@ -82,6 +82,32 @@ function ArticleHeader() {
   );
 }
 
+function ArticleJump() {
+  return (
+    <section className="article-jump">
+      <div className="shell">
+        <div className="article-jump-card">
+          <div className="article-jump-head">
+            <div className="mono article-jump-eyebrow">In this piece · jump to</div>
+            <div className="article-jump-meta mono">6 sections · {ARTICLE.read}</div>
+          </div>
+          <ol className="article-jump-list">
+            {TOC.map((t, i) => (
+              <li key={t.id}>
+                <a href={"#" + t.id}>
+                  <span className="article-jump-num mono">0{i + 1}</span>
+                  <span className="article-jump-label serif">{t.label}</span>
+                  <span className="article-jump-arrow">→</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function PullQuote({ children, by }) {
   return (
     <figure className="pull">
@@ -344,6 +370,7 @@ export default function ArticleApp() {
       <ArticleNav />
       <main>
         <ArticleHeader />
+        <ArticleJump />
         <ArticleBody />
         <RelatedReads />
       </main>

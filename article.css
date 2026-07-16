@@ -115,6 +115,94 @@
   .article-hero-photo { aspect-ratio: 5/4; border-radius: 22px 22px 22px 120px; }
 }
 
+/* ── Jump-to TOC (inline, after hero) ──────────────────────────────── */
+.article-jump {
+  background: var(--paper);
+  padding: clamp(24px, 3vw, 40px) 0 0;
+}
+.article-jump-card {
+  background: var(--cream-soft);
+  border: 0.5px solid var(--line);
+  border-radius: 22px 22px 22px 90px;
+  padding: clamp(22px, 2.5vw, 32px) clamp(24px, 3vw, 40px);
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.article-jump-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 14px;
+  border-bottom: 0.5px solid var(--line);
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.article-jump-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+}
+.article-jump-meta {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.article-jump-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 28px;
+  row-gap: 2px;
+}
+.article-jump-list a {
+  display: grid;
+  grid-template-columns: 36px 1fr 28px;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 14px 14px 10px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.article-jump-list a:hover {
+  background: rgba(31, 61, 46, 0.05);
+  transform: translateX(2px);
+}
+.article-jump-list a:hover .article-jump-arrow {
+  transform: translateX(4px);
+  color: var(--terracotta);
+}
+.article-jump-num {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  opacity: 0.7;
+}
+.article-jump-label {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+.article-jump-arrow {
+  font-family: var(--sans);
+  font-size: 18px;
+  color: var(--forest);
+  transition: transform 0.18s ease, color 0.18s ease;
+  text-align: right;
+}
+@media (max-width: 720px) {
+  .article-jump-list { grid-template-columns: 1fr; }
+  .article-jump-card { border-radius: 22px; }
+}
+
 /* ── Body ──────────────────────────────────────────────────────────── */
 .article-body { background: var(--paper); padding: clamp(48px, 6vw, 96px) 0; }
 .article-body-grid {

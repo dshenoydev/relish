@@ -17,8 +17,9 @@
 .path-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 10px;
   margin-top: 56px;
+  align-items: start;
 }
 .path-card {
   position: relative;
@@ -27,13 +28,13 @@
   align-items: flex-start;
   gap: 18px;
   text-align: left;
-  padding: 22px 22px 20px;
-  min-height: 168px;
+  padding: 16px 20px 14px;
+  min-height: 0;
   background: var(--cream-soft);
   border: 0.5px solid var(--line);
   border-radius: 16px;
   font-family: var(--serif);
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1.25;
   color: var(--ink);
   letter-spacing: -0.005em;
@@ -53,7 +54,7 @@
   color: var(--ink-soft);
   opacity: 0.7;
 }
-.path-label { display: block; flex: 1; }
+.path-label { display: block; flex: none; }
 .path-arrow {
   font-family: var(--sans);
   font-size: 22px;

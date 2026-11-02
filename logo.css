@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
 }
-.relish-mark svg { display: block; }
+.relish-mark img { display: block; }
 
 .relish-word {
   font-family: var(--serif);
